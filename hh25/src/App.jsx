@@ -3,17 +3,16 @@ import './App.css';
 import LoyolaLogo from './icons/Loyola-logo.png';
 import MIS from './icons/MIS.png';
 import ACM from './icons/ACM.png';
-import CyberHounds from './icons/CyberHounds.png'
+import CyberHounds from './icons/CyberHounds.png';
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, Sprout, GraduationCap, Sparkles, Crown } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
 import { GrInstagram } from "react-icons/gr";
-import { TbBrandDiscord } from "react-icons/tb"
-
-
+import { TbBrandDiscord } from "react-icons/tb";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
+  const [isFormVisible, setIsFormVisible] = useState(false); // New state for toggling visibility
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +29,10 @@ function App() {
 
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
+  };
+
+  const handleApplyClick = () => {
+    setIsFormVisible(true); // Show the form when the button is clicked
   };
 
   return (
@@ -54,6 +57,8 @@ function App() {
         ))}
       </div>
 
+
+
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/80 backdrop-blur-md py-2' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
@@ -68,9 +73,6 @@ function App() {
             <a href="#prizes" className="text-green-300 hover:text-pink-100 transition">Prizes</a>
             <a href="#faq" className="text-green-300 hover:text-pink-100 transition">FAQ</a>
           </nav>
-          <button className="bg-white-500 hover:bg-white-400 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg shadow-gray-500/50">
-            Login
-          </button>
         </div>
       </header>
 
@@ -94,12 +96,38 @@ function App() {
 
         <div className="text-center mb-12">
           <p className="text-white text-xl">
-            Join the <a href="#" className="text-pink-300 hover:underline">Devpost</a> and <a href="#" className="text-pink-300 hover:underline">Discord</a>
+            Join the <a href="#" className="text-pink-300 hover:underline">Instagram</a> and <a href="#" className="text-pink-300 hover:underline">Discord</a>
           </p>
           <p className="text-white text-xl mt-2">
-            and <a href="#" className="text-pink-300 hover:underline">Log in</a> to see your hacker ID!
+            for more information on the event!
           </p>
         </div>
+
+              {/* Apply Button */}
+      <div className="container mx-auto px-4 py-24 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <button
+            onClick={handleApplyClick}
+            className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+          >
+            Apply
+          </button>
+        </div>
+
+        {/* Typeform Embed */}
+        {isFormVisible && (
+          <div className="max-w-4xl mx-auto mt-8">
+            <iframe
+              src="https://form.typeform.com/to/jymAQivY"
+              width="100%"
+              height="500"
+              frameBorder="0"
+              style={{ border: 'none' }}
+              title="Typeform Survey"
+            ></iframe>
+          </div>
+        )}
+      </div>
 
         {/* Interactive Astronaut */}
         <div className="w-full max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
