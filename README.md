@@ -10,3 +10,11 @@ HackHounds '25 Website! Contributors include: Silas Green and Callie Walker (for
 
 ## Things we need
 - Last year's Hackathon pics to display
+
+
+## Installations
+- npm install
+- npm install lucide-react
+- npm install react-icons
+- npm install tailwindcss @tailwindcss/vite
+- npm install daisyui
