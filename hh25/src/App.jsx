@@ -3,8 +3,9 @@ import './App.css';
 import LoyolaLogo from './icons/Loyola-logo.png';
 import MIS from './icons/MIS.png';
 import ACM from './icons/ACM.png';
+import HH25 from './icons/HH25.png';
 import CyberHounds from './icons/CyberHounds.png';
-import { BriefcaseMedical, BrainCircuit, CircleDollarSign, Sprout, GraduationCap, Sparkles, Crown } from 'lucide-react';
+import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
 import { GrInstagram } from "react-icons/gr";
 import { TbBrandDiscord } from "react-icons/tb";
@@ -12,7 +13,7 @@ import { TbBrandDiscord } from "react-icons/tb";
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
-  const [isFormVisible, setIsFormVisible] = useState(false); // New state for toggling visibility
+  const [isFormVisible, setIsFormVisible] = useState(false); // State for toggling visibility
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,11 +33,11 @@ function App() {
   };
 
   const handleApplyClick = () => {
-    setIsFormVisible(true); // Show the form when the button is clicked
+    setIsFormVisible(!isFormVisible); // Toggle form visibility
   };
 
   return (
-    <div className="bg-gray-950 relative overflow-hidden">
+    <div className="bg-black relative overflow-hidden">
       {/* Enhanced Background stars */}
       <div className="absolute inset-0 z-0">
         {[...Array(200)].map((_, i) => (
@@ -57,13 +58,11 @@ function App() {
         ))}
       </div>
 
-
-
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/80 backdrop-blur-md py-2' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src={LoyolaLogo} alt="Logo" className="h-10 w-10" />
+            <img src={HH25} alt="Logo" className="h-10 w-10" />
             <span className="text-white font-bold text-xl ml-2">HackHounds '25</span>
           </div>
           <nav className="hidden md:flex space-x-8">
@@ -103,55 +102,38 @@ function App() {
           </p>
         </div>
 
-              {/* Apply Button */}
-      <div className="container mx-auto px-4 py-24 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <button
-            onClick={handleApplyClick}
-            className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
-          >
-            Apply
-          </button>
-        </div>
-
-        {/* Typeform Embed */}
-        {isFormVisible && (
-          <div className="max-w-4xl mx-auto mt-8">
-            <iframe
-              src="https://form.typeform.com/to/jymAQivY"
-              width="100%"
-              height="500"
-              frameBorder="0"
-              style={{ border: 'none' }}
-              title="Typeform Survey"
-            ></iframe>
+        {/* Enhanced Apply Button & Form Section */}
+        <div className="container mx-auto px-4 py-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <button
+              onClick={handleApplyClick}
+              className="group relative overflow-hidden px-8 py-4 bg-gradient-to-r from-green-400 to-green-400 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <span className="relative flex items-center justify-center">
+                <span className="pixelated tracking-wider">APPLY NOW!</span>
+              </span>
+            </button>
           </div>
-        )}
-      </div>
 
-        {/* Interactive Astronaut */}
-        <div className="w-full max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="pixel-art astronaut-container">
-            <div className="astronaut">
-              <div className="helmet"></div>
-              <div className="visor">
-                <div className="eye left"></div>
-                <div className="eye right"></div>
-              </div>
-              <div className="body"></div>
+          {/* Google Form Embed */}
+          {isFormVisible && (
+            <div className="max-w-4xl mx-auto mt-8 bg-black/70 border border-white-500/30 rounded-xl p-6 backdrop-blur-sm transition-all transform hover:border-white-500/50 hover:shadow-lg hover:shadow-white-500/20">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdh6kFRQX8A3g1wXj7FoEwqpE98QtSVsjdy8ZC3Y2G0vzjqnw/viewform?embedded=true"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                style={{ border: 'none', borderRadius: '0.5rem' }}
+                title="Application Form"
+              >Loading…</iframe>
             </div>
-          </div>
-          
-          <div className="pixel-cloud float-animation">
-            {/* Cloud-like shape */}
-          </div>
+          )}
         </div>
       </main>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center pixelated">
-        <p className="text-2xl mb-2 tracking-widest animate-pulse">SCROLL FOR</p>
-        <p className="text-2xl tracking-widest animate-pulse">MORE INFO!</p>
         <div className="mt-4 animate-bounce">
           <svg
             width="40"
@@ -167,10 +149,14 @@ function App() {
       </div>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-gray-900/40 backdrop-blur-sm relative z-10">
+      <section id="about" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">ABOUT</h2>
           <div className="max-w-4xl mx-auto bg-gray-900/70 border border-gray-500/50 rounded-2xl p-8 shadow-lg backdrop-blur-md">
+            {/* Add the HH25 logo here */}
+            <div className="flex justify-center mb-8">
+              <img src={HH25} alt="HackHounds 25 Logo" className="h-24 w-24" />
+            </div>
             <p className="text-white text-lg mb-4">
               HackHounds is Baltimore's premier student-run hackathon, bringing together 300+ innovative minds from across the country for 24 hours of coding, creativity, and collaboration.
             </p>
@@ -180,6 +166,130 @@ function App() {
             <p className="text-white text-lg">
               This year's theme, "Cosmic Connections," challenges participants to create projects that bridge gaps and connect communities through technology.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Schedule Section */}
+      <section id="schedule" className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SCHEDULE</h2>
+
+          {/* Schedule Grid */}
+          <div className="max-w-4xl mx-auto">
+            {/* Day 1 - Saturday, April 6 */}
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-green-400 mb-6 pixelated">Saturday, April 5</h3>
+              <div className="space-y-4">
+                {/* Event Items */}
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">10:00 AM</p>
+                  <p className="text-white/80">Doors Open</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">11:00 AM</p>
+                  <p className="text-white/80">Opening Ceremony</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">12:00 PM</p>
+                  <p className="text-white/80">Hacking Begins!</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">12:15 PM</p>
+                  <p className="text-white/80">Lunch</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">12:45 PM</p>
+                  <p className="text-white/80">Team Formation (optional)</p>
+                </div>
+              </div>
+
+              {/* Workshops */}
+              <h4 className="text-2xl font-bold text-green-400 mt-8 mb-4 pixelated">Workshops</h4>
+              <div className="space-y-4">
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">1:30 PM</p>
+                  <p className="text-white/80">Mechatronics with Arduino Traffic Lights</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">1:30 PM</p>
+                  <p className="text-white/80">Building a 3D Printed Remote Controlled Vehicle</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">3:00 PM</p>
+                  <p className="text-white/80">Physical Computing with Microbits</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">4:30 PM</p>
+                  <p className="text-white/80">How to Build your First Website - Bubble.io</p>
+                </div>
+              </div>
+
+              {/* Evening Events */}
+              <h4 className="text-2xl font-bold text-green-400 mt-8 mb-4 pixelated">Evening</h4>
+              <div className="space-y-4">
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">6:30 PM</p>
+                  <p className="text-white/80">Dinner</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">7:30 PM</p>
+                  <p className="text-white/80">Company Networking</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">9:00 PM</p>
+                  <p className="text-white/80">Break Time - Smash Tournament</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">10:00 PM</p>
+                  <p className="text-white/80">Nighttime Snack</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">11:00 PM</p>
+                  <p className="text-white/80">Quiet Hours Begin</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 2 - Sunday, April 7 */}
+            <div>
+              <h3 className="text-3xl font-bold text-green-400 mb-6 pixelated">Sunday, April 6</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">7:30 AM</p>
+                  <p className="text-white/80">Breakfast</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">9:00 AM</p>
+                  <p className="text-white/80">Continue Hacking</p>
+                </div>
+    
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">11:00 AM</p>
+                  <p className="text-white/80">Staff available for Submission Questions</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">12:00 PM</p>
+                  <p className="text-white/80">Hacking Ends!</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">12:15 PM</p>
+                  <p className="text-white/80">Lunch</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">1:00 PM</p>
+                  <p className="text-white/80">Project Presentations and Judging</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">3:00 PM</p>
+                  <p className="text-white/80">Awards Ceremony</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">4:00 PM</p>
+                  <p className="text-white/80">Event Ends</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -194,11 +304,11 @@ function App() {
             
 
       {/* Track 1 - Health Tech */}
-      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <BriefcaseMedical size={32} className="text-blue-400" />
+      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <Sparkles size={32} className="text-purple-400" />
         </div>
-        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH TECH</h3>
+        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
         <p className="text-white text-center">
           Create solutions that improve healthcare access, patient outcomes, or wellness tracking. Focus on leveraging technology to solve real-world health challenges.
         </p>
@@ -220,18 +330,18 @@ function App() {
         <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
           <CircleDollarSign size={32} className="text-green-400" />
         </div>
-        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINTECH</h3>
+        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINANCE</h3>
         <p className="text-white text-center">
           Revolutionize financial services with innovative technology solutions. From payment systems to financial education, make finance more accessible and efficient.
         </p>
       </div>
 
       {/* Track 4 - Sustainability */}
-      <div className="bg-black/50 border border-amber-700/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-amber-700/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <Sprout size={32} className="text-amber-700" />
+      <div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-teal-200/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <Eye size={32} className="text-teal-200" />
         </div>
-        <h3 className="text-2xl font-bold text-amber-700 text-center mb-4 pixelated">SUSTAINABILITY</h3>
+        <h3 className="text-2xl font-bold text-teal-200 text-center mb-4 pixelated">COMPUTER VISION</h3>
         <p className="text-white text-center">
           Create tech solutions that address environmental challenges, promote sustainability, and help build a greener future for our planet.
         </p>
@@ -243,18 +353,18 @@ function App() {
         <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
           <GraduationCap size={32} className="text-yellow-400" />
         </div>
-        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">EDUCATION</h3>
+        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
         <p className="text-white text-center">
           Develop innovative tools that enhance learning experiences, improve educational access, or help students and educators achieve better outcomes.
         </p>
       </div>
 
             {/* Track 6 - Open Innovation */}
-      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <Sparkles size={32} className="text-purple-400" />
+      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <BriefcaseMedical size={32} className="text-blue-400" />
         </div>
-        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">OPEN INNOVATION</h3>
+        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH</h3>
         <p className="text-white text-center">
           Got a wild idea that doesn't fit our other tracks? This is your space to innovate freely and create something truly unique and groundbreaking.
         </p>
@@ -264,7 +374,7 @@ function App() {
       </section>
 
       {/* Prizes Section - NEW */}
-      <section id="prizes" className="py-24 bg-gray-900/40 backdrop-blur-sm relative z-10">
+      <section id="prizes" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">PRIZES</h2>
           
@@ -495,14 +605,7 @@ function App() {
                 onClick={() => toggleFaq(5)}
               >
                 <span className="text-white font-medium text-lg">What are the judging criteria?</span>
-                <svg 
-                  className={`w-6 h-6 transform transition-transform ${activeFaq === 5 ? 'rotate-180' : ''}`}
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+
               </button>
               {activeFaq === 5 && (
                 <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
@@ -517,7 +620,7 @@ function App() {
       </section>
 
       {/* Sponsors Section - NEW */}
-<section id="sponsors" className="py-24 bg-gray-900/40 backdrop-blur-sm relative z-10">
+<section id="sponsors" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
     <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SPONSORS</h2>
     
