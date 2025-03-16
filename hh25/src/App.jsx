@@ -4,10 +4,14 @@ import LoyolaLogo from './icons/Loyola-logo.png';
 import MIS from './icons/MIS.png';
 import ACM from './icons/ACM.png';
 import HH25 from './icons/HH25.png';
+import Silas from './icons/Silas.png';
+import Jenna from './icons/Jenna.png';
+import John from './icons/John.jpg';
+import Bron from './icons/Bron.png'
 import CyberHounds from './icons/CyberHounds.png';
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
-import { GrInstagram } from "react-icons/gr";
+import { GrGithub, GrInstagram, GrLinkedin } from "react-icons/gr";
 import { TbBrandDiscord } from "react-icons/tb";
 
 function App() {
@@ -35,6 +39,68 @@ function App() {
   const handleApplyClick = () => {
     setIsFormVisible(!isFormVisible); // Toggle form visibility
   };
+
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const toggleFlip = (index) => {
+    setFlippedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+
+
+  const teamMembers = [
+    { 
+      name: "Silas Green", 
+      role: "Web Developer", 
+      photo: Silas, 
+      github: "https://github.com/SGreen24", 
+      linkedin: "https://www.linkedin.com/in/silas-green-069a62250/",
+      hometown: "Long Island, NY",
+      majorYear: "Computer Science, Senior",
+      funFact: "Graduating a year early!"
+    },
+    { 
+      name: "Callie Walker", 
+      role: "Team Member", 
+      photo: "path_to_photo2.jpg", 
+      github: "https://github.com/ccwalk", 
+      linkedin: "https://www.linkedin.com/in/callie-walker-353a1b334/",
+      hometown: "Los Angeles, CA",
+      majorYear: "Data Science, Junior",
+      funFact: "Once met a celebrity at a coffee shop."
+    },
+    { name: "Nicol Gutierrez", 
+      role: "Team Member", 
+      photo: "path_to_photo3.jpg" 
+    },
+    { name: "Emma Heiser", 
+      role: "Team Member", 
+      photo: "path_to_photo3.jpg", 
+      linkedin: "https://www.linkedin.com/in/emmasheiser/" 
+    },
+    { name: "Dave Optitz", 
+      role: "CS Faculty", 
+      photo: "path_to_photo3.jpg", 
+      github: "https://github.com/emilyzou", 
+      linkedin: "https://linkedin.com/in/emilyzou" 
+    },
+    { name: "John Nweke", 
+      role: "CS Faculty", 
+      photo: John 
+    },
+    { name: "Lebron James", 
+      role: "Team Member", 
+      photo: Bron 
+    },
+    { name: "Jenna Borowy", 
+      role: "Team Member", 
+      photo: Jenna, 
+      linkedin: "https://www.linkedin.com/in/jenna-borowy/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
+    },
+  ];
 
   return (
     <div className="bg-black relative overflow-hidden">
@@ -94,13 +160,13 @@ function App() {
         </div>
 
         <div className="text-center mb-12">
-          <p className="text-white text-xl">
-            Join the <a href="#" className="text-pink-300 hover:underline">Instagram</a> and <a href="#" className="text-pink-300 hover:underline">Discord</a>
-          </p>
-          <p className="text-white text-xl mt-2">
-            for more information on the event!
-          </p>
-        </div>
+  <p className="text-white text-xl">
+    Join the <a href="https://www.instagram.com/loyolacyberhounds?igsh=bGRhcHdzMmR6ZXY0" className="text-pink-300 hover:underline">Instagram</a> and <a href="https://discord.gg/qgKP2akCWK" className="text-pink-300 hover:underline">Discord</a>
+  </p>
+  <p className="text-white text-xl mt-2">
+    for more information on the event!
+  </p>
+</div>
 
         {/* Enhanced Apply Button & Form Section */}
         <div className="container mx-auto px-4 py-8 relative z-10">
@@ -166,6 +232,169 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Tracks Section - NEW */}
+<section id="tracks" className="py-24 relative z-10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">TRACKS</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Track 1 - General */}
+      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <Sparkles size={32} className="text-purple-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
+        <div className="text-white text-center">
+          Submit your project to the General Track to be eligible for the following $100 Amazon Gift Cards:
+          <ul className="list-disc list-inside mt-2">
+            <li>Best First Time Hack</li>
+            <li>Best Entrepreneurship Idea</li>
+            <li>Best UI/UX Design</li>
+            <li>Most Socially Beneficial</li>
+            <li>Best Use of Cybersecurity</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Track 2 - AI/ML */}
+<div className="bg-black/50 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+  <div className="w-16 h-16 bg-red-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+    <BrainCircuit size={32} className="text-red-400" />
+  </div>
+  <h3 className="text-2xl font-bold text-red-400 text-center mb-4 pixelated">AI/ML</h3>
+  <p className="text-white text-center">
+    Harness the power of artificial intelligence and machine learning. Build intelligent systems, predictive models, or innovative applications that solve real-world problems.
+  </p>
+</div>
+
+      {/* Track 3 - Fintech */}
+      <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <CircleDollarSign size={32} className="text-green-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINANCE</h3>
+        <p className="text-white text-center">
+          Revolutionize financial services with innovative technology solutions. From payment systems to financial education, make finance more accessible and efficient.
+        </p>
+      </div>
+
+      {/* Track 4 - Computer Vision */}
+<div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+  <div className="w-16 h-16 bg-teal-200/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+    <Eye size={32} className="text-teal-200" />
+  </div>
+  <h3 className="text-2xl font-bold text-teal-200 text-center mb-4 pixelated">COMPUTER VISION</h3>
+  <p className="text-white text-center">
+    Create solutions that leverage image and video analysis. From object detection to augmented reality, explore how machines can "see" and interpret the world.
+  </p>
+</div>
+
+      {/* Track 5 - Art/Multimedia */}
+      <div className="bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <GraduationCap size={32} className="text-yellow-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
+        <p className="text-white text-center">
+          Explore the intersection of creativity and technology. Build projects that push the boundaries of digital art, animation, interactive media, or generative design. Show us how technology can amplify artistic expression!
+        </p>
+      </div>
+
+      {/* Track 6 - Health */}
+      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <BriefcaseMedical size={32} className="text-blue-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH</h3>
+        <p className="text-white text-center">
+          Innovate for a healthier future. Create solutions that improve healthcare access, patient outcomes, or wellness. Whether it's AI diagnostics, telemedicine, or fitness tech, your ideas can transform lives.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* Prizes Section - NEW */}
+<section id="prizes" className="py-24 relative z-10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">PRIZES</h2>
+    
+    <div className="max-w-5xl mx-auto">
+      {/* Grand Prize */}
+      <div className="bg-gradient-to-r from-amber-500/20 to-amber-300/20 border border-amber-400 rounded-xl p-8 backdrop-blur-sm transform transition-all hover:scale-105 mb-8">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="mb-6 md:mb-0 md:mr-8">
+            <div className="w-24 h-24 bg-amber-400/30 rounded-full flex items-center justify-center">
+              <TbHexagonNumber1 className="w-12 h-12 text-amber-400" />
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <h3 className="text-3xl font-bold text-amber-400 mb-2 pixelated">GRAND PRIZE</h3>
+            <p className="text-white text-xl mb-4">$300</p>
+            <p className="text-white/80">The overall best project will win cash prizes!</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Second and Third Place Row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        {/* Second Place */}
+        <div className="bg-gradient-to-r from-slate-400/20 to-slate-300/20 border border-slate-400 rounded-xl p-6 backdrop-blur-sm transform transition-all hover:scale-105">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-slate-400/30 rounded-full flex items-center justify-center mb-4">
+              <TbHexagonNumber2 className="w-8 h-8 text-slate-300" />
+            </div>
+            <h3 className="text-2xl font-bold text-slate-300 mb-2 pixelated">SECOND PLACE</h3>
+            <p className="text-white text-lg mb-2">$200</p>
+            <p className="text-white/80">Runner-up project with exceptional innovation and execution!</p>
+          </div>
+        </div>
+
+        {/* Third Place */}
+        <div className="bg-gradient-to-r from-amber-700/20 to-amber-600/20 border border-amber-700 rounded-xl p-6 backdrop-blur-sm transform transition-all hover:scale-105">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-amber-700/30 rounded-full flex items-center justify-center mb-4">
+              <TbHexagonNumber3 className="w-8 h-8 text-amber-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-amber-600 mb-2 pixelated">THIRD PLACE</h3>
+            <p className="text-white text-lg mb-2">$100</p>
+            <p className="text-white/80">Third best project combining creativity and technical skill!</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Track Winners and Newcomer Award Row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Track Prizes */}
+        <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4">
+              <Crown size={32} className="text-purple-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-purple-400 mb-2 pixelated">TRACK WINNERS</h3>
+            <p className="text-white text-lg mb-2">$100 Per Track</p>
+            <p className="text-white/80">Best project in each of our six themed tracks.</p>
+          </div>
+        </div>
+
+        {/* Newcomer Prize */}
+        <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L14.5 9H22L16 13.5L18 21L12 17L6 21L8 13.5L2 9H9.5L12 2Z" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-green-400 mb-2 pixelated">NEWCOMER AWARD</h3>
+            <p className="text-white text-lg mb-2">$100</p>
+            <p className="text-white/80">Best project from first-time hackathon participants!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Schedule Section */}
       <section id="schedule" className="py-24 relative z-10">
@@ -291,168 +520,7 @@ function App() {
         </div>
       </section>
 
-{/* Tracks Section - NEW */}
-<section id="tracks" className="py-24 relative z-10">
-  <div className="container mx-auto px-4">
-    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">TRACKS</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Track 1 - General */}
-      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <Sparkles size={32} className="text-purple-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
-        <div className="text-white text-center">
-          Submit your project to the General Track to be eligible for the following Amazon Gift Cards:
-          <ul className="list-disc list-inside mt-2">
-            <li>Best First Time Hack</li>
-            <li>Best Entrepreneurship Idea</li>
-            <li>Best UI/UX Design</li>
-            <li>Most Socially Beneficial</li>
-            <li>Best Use of Cybersecurity</li>
-          </ul>
-        </div>
-      </div>
 
-      {/* Track 2 - AI/ML */}
-<div className="bg-black/50 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-  <div className="w-16 h-16 bg-red-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-    <BrainCircuit size={32} className="text-red-400" />
-  </div>
-  <h3 className="text-2xl font-bold text-red-400 text-center mb-4 pixelated">AI/ML</h3>
-  <p className="text-white text-center">
-    Harness the power of artificial intelligence and machine learning. Build intelligent systems, predictive models, or innovative applications that solve real-world problems.
-  </p>
-</div>
-
-      {/* Track 3 - Fintech */}
-      <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <CircleDollarSign size={32} className="text-green-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINANCE</h3>
-        <p className="text-white text-center">
-          Revolutionize financial services with innovative technology solutions. From payment systems to financial education, make finance more accessible and efficient.
-        </p>
-      </div>
-
-      {/* Track 4 - Computer Vision */}
-<div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-  <div className="w-16 h-16 bg-teal-200/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-    <Eye size={32} className="text-teal-200" />
-  </div>
-  <h3 className="text-2xl font-bold text-teal-200 text-center mb-4 pixelated">COMPUTER VISION</h3>
-  <p className="text-white text-center">
-    Create solutions that leverage image and video analysis. From object detection to augmented reality, explore how machines can "see" and interpret the world.
-  </p>
-</div>
-
-      {/* Track 5 - Art/Multimedia */}
-      <div className="bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <GraduationCap size={32} className="text-yellow-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
-        <p className="text-white text-center">
-          Explore the intersection of creativity and technology. Build projects that push the boundaries of digital art, animation, interactive media, or generative design. Show us how technology can amplify artistic expression!
-        </p>
-      </div>
-
-      {/* Track 6 - Health */}
-      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <BriefcaseMedical size={32} className="text-blue-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH</h3>
-        <p className="text-white text-center">
-          Innovate for a healthier future. Create solutions that improve healthcare access, patient outcomes, or wellness. Whether it's AI diagnostics, telemedicine, or fitness tech, your ideas can transform lives.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{/* Prizes Section - NEW */}
-<section id="prizes" className="py-24 relative z-10">
-  <div className="container mx-auto px-4">
-    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">PRIZES</h2>
-    
-    <div className="max-w-5xl mx-auto">
-      {/* Grand Prize */}
-      <div className="bg-gradient-to-r from-amber-500/20 to-amber-300/20 border border-amber-400 rounded-xl p-8 backdrop-blur-sm transform transition-all hover:scale-105 mb-8">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="mb-6 md:mb-0 md:mr-8">
-            <div className="w-24 h-24 bg-amber-400/30 rounded-full flex items-center justify-center">
-              <TbHexagonNumber1 className="w-12 h-12 text-amber-400" />
-            </div>
-          </div>
-          <div className="text-center md:text-left">
-            <h3 className="text-3xl font-bold text-amber-400 mb-2 pixelated">GRAND PRIZE</h3>
-            <p className="text-white text-xl mb-4">$500</p>
-            <p className="text-white/80">The overall best project will win cash prizes!</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Second and Third Place Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        {/* Second Place */}
-        <div className="bg-gradient-to-r from-slate-400/20 to-slate-300/20 border border-slate-400 rounded-xl p-6 backdrop-blur-sm transform transition-all hover:scale-105">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-slate-400/30 rounded-full flex items-center justify-center mb-4">
-              <TbHexagonNumber2 className="w-8 h-8 text-slate-300" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-300 mb-2 pixelated">SECOND PLACE</h3>
-            <p className="text-white text-lg mb-2">$300</p>
-            <p className="text-white/80">Runner-up project with exceptional innovation and execution!</p>
-          </div>
-        </div>
-
-        {/* Third Place */}
-        <div className="bg-gradient-to-r from-amber-700/20 to-amber-600/20 border border-amber-700 rounded-xl p-6 backdrop-blur-sm transform transition-all hover:scale-105">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-amber-700/30 rounded-full flex items-center justify-center mb-4">
-              <TbHexagonNumber3 className="w-8 h-8 text-amber-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-amber-600 mb-2 pixelated">THIRD PLACE</h3>
-            <p className="text-white text-lg mb-2">$200</p>
-            <p className="text-white/80">Third best project combining creativity and technical skill!</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Track Winners and Newcomer Award Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Track Prizes */}
-        <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4">
-              <Crown size={32} className="text-purple-400" />
-            </div>
-            <h3 className="text-2xl font-bold text-purple-400 mb-2 pixelated">TRACK WINNERS</h3>
-            <p className="text-white text-lg mb-2">$100 Per Track</p>
-            <p className="text-white/80">Best project in each of our six themed tracks.</p>
-          </div>
-        </div>
-
-        {/* Newcomer Prize */}
-        <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L14.5 9H22L16 13.5L18 21L12 17L6 21L8 13.5L2 9H9.5L12 2Z" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-green-400 mb-2 pixelated">NEWCOMER AWARD</h3>
-            <p className="text-white text-lg mb-2">$100</p>
-            <p className="text-white/80">Best project from first-time hackathon participants!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 {/* FAQ Section - NEW */}
 <section id="faq" className="py-24 relative z-10">
@@ -613,23 +681,97 @@ function App() {
   </div>
 </section>
 
-      {/* Sponsors Section - NEW */}
+      {/* Team Section */}
+      <section id="team" className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">TEAM</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div 
+                key={index} 
+                className={`flip-card ${flippedCards[index] ? 'flipped' : ''}`}
+                onClick={() => toggleFlip(index)}
+              >
+                <div className="flip-card-inner">
+                  {/* Front of the card */}
+                  <div className="flip-card-front">
+                    {member.photo && (
+                      <img 
+                        src={member.photo} 
+                        alt={member.name} 
+                        className="w-32 h-32 rounded-full mb-4 object-cover" 
+                      />
+                    )}
+                    <h3 className="text-2xl font-bold text-white text-center">{member.name}</h3>
+                    <p className="text-white/80 text-center mb-4">{member.role}</p>
+                    <div className="flex justify-center space-x-4">
+                      {member.github && (
+                        <a 
+                          href={member.github} 
+                          className="text-white hover:text-green-400 transition-colors"
+                          onClick={(e) => e.stopPropagation()} 
+                        >
+                          <GrGithub className="w-6 h-6" />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a 
+                          href={member.linkedin} 
+                          className="text-white hover:text-green-400 transition-colors"
+                          onClick={(e) => e.stopPropagation()} 
+                        >
+                          <GrLinkedin className="w-6 h-6" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  {/* Back of the card */}
+                  <div className="flip-card-back">
+                    <h3 className="text-2xl font-bold text-white mb-4">{member.name}</h3>
+                    {member.hometown && (
+                      <p className="text-white/80 mb-2"><strong>Hometown:</strong> {member.hometown}</p>
+                    )}
+                    {member.majorYear && (
+                      <p className="text-white/80 mb-2"><strong>Major/Year:</strong> {member.majorYear}</p>
+                    )}
+                    {member.funFact && (
+                      <p className="text-white/80"><strong>Fun Fact:</strong> {member.funFact}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+{/* Sponsors Section - NEW */}
 <section id="sponsors" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
     <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SPONSORS</h2>
     
     {/* Centered Grid for Sponsors */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-      {/* Sponsor Logos */}
-      <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-        <img src={MIS} alt="Sponsor 1" className="max-h-20" />
-      </div>
-      <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-        <img src={CyberHounds} alt="Sponsor 2" className="max-h-20" />
-      </div>
-      <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-        <img src={ACM} alt="Sponsor 3" className="max-h-20" />
-      </div>
+      {/* Sponsor 1 - MIS with Instagram Link */}
+      <a href="https://www.instagram.com/loyolamis" target="_blank" rel="noopener noreferrer">
+        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
+          <img src={MIS} alt="Sponsor 1" className="max-h-20" />
+        </div>
+      </a>
+
+      {/* Sponsor 2 - CyberHounds with Instagram Link */}
+      <a href="https://www.instagram.com/loyolacyberhounds" target="_blank" rel="noopener noreferrer">
+        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
+          <img src={CyberHounds} alt="Sponsor 2" className="max-h-20" />
+        </div>
+      </a>
+
+      {/* Sponsor 3 - ACM with Instagram Link */}
+      <a href="https://www.instagram.com/loyolacomputes" target="_blank" rel="noopener noreferrer">
+        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
+          <img src={ACM} alt="Sponsor 3" className="max-h-20" />
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -641,11 +783,14 @@ function App() {
             &copy; 2025 HackHounds. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-white/70 hover:text-green-400 transition-colors">
+            <a href="https://discord.gg/qgKP2akCWK" className="text-white/70 hover:text-green-400 transition-colors">
               <TbBrandDiscord className='w-6 h-6' />
             </a>
-            <a href="#" className="text-white/70 hover:text-green-400 transition-colors">
+            <a href="https://www.instagram.com/loyolacyberhounds?igsh=bGRhcHdzMmR6ZXY0" className="text-white/70 hover:text-green-400 transition-colors">
             <GrInstagram className='w-6 h-6' />
+            </a>
+            <a href="https://github.com/SGreen24/HH25" className='text-white/70 hover:text-green-400 transition-colors'>
+            <GrGithub className='w-6 h-6' />
             </a>
           </div>
         </div>
