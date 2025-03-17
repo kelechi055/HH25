@@ -7,7 +7,8 @@ import HH25 from './icons/HH25.png';
 import Silas from './icons/Silas.png';
 import Jenna from './icons/Jenna.png';
 import John from './icons/John.jpg';
-import Bron from './icons/Bron.png'
+import Nicol from './icons/Nicol.png'
+import Callie from './icons/Callie.png'
 import CyberHounds from './icons/CyberHounds.png';
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
@@ -60,21 +61,25 @@ function App() {
       linkedin: "https://www.linkedin.com/in/silas-green-069a62250/",
       hometown: "Long Island, NY",
       majorYear: "Computer Science, Senior",
-      funFact: "Graduating a year early!"
+      funFact: "I was a All-State Saxophonist in High School!"
     },
     { 
       name: "Callie Walker", 
       role: "Team Member", 
-      photo: "path_to_photo2.jpg", 
+      photo: Callie, 
       github: "https://github.com/ccwalk", 
       linkedin: "https://www.linkedin.com/in/callie-walker-353a1b334/",
-      hometown: "Los Angeles, CA",
-      majorYear: "Data Science, Junior",
-      funFact: "Once met a celebrity at a coffee shop."
+      hometown: "Calvert County, MD",
+      majorYear: "Computer Science, Senior",
+      funFact: "I got 7th in my 8th grade Spelling Bee!"
     },
     { name: "Nicol Gutierrez", 
       role: "Team Member", 
-      photo: "path_to_photo3.jpg" 
+      photo: Nicol,
+      linkedin: "https://www.linkedin.com/in/nicol-gutierrez-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      hometown: "Pasadena, MD",
+      majorYear: "Information Systems and Data Analytics, Senior",
+      funFact: "I share a birth day AND  time with my 2 year old sister!"
     },
     { name: "Emma Heiser", 
       role: "Team Member", 
@@ -84,21 +89,18 @@ function App() {
     { name: "Dave Optitz", 
       role: "CS Faculty", 
       photo: "path_to_photo3.jpg", 
-      github: "https://github.com/emilyzou", 
-      linkedin: "https://linkedin.com/in/emilyzou" 
     },
     { name: "John Nweke", 
       role: "CS Faculty", 
       photo: John 
     },
-    { name: "Lebron James", 
-      role: "Team Member", 
-      photo: Bron 
-    },
     { name: "Jenna Borowy", 
       role: "Team Member", 
       photo: Jenna, 
-      linkedin: "https://www.linkedin.com/in/jenna-borowy/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
+      linkedin: "https://www.linkedin.com/in/jenna-borowy/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      hometown: "Baltimore County, MD",
+      majorYear: "Computer Science and Applied Math, Senior",
+      funFact: "I have extra bones in each of my feet"
     },
   ];
 
@@ -332,7 +334,7 @@ function App() {
           <div className="text-center md:text-left">
             <h3 className="text-3xl font-bold text-amber-400 mb-2 pixelated">GRAND PRIZE</h3>
             <p className="text-white text-xl mb-4">$300</p>
-            <p className="text-white/80">The overall best project will win cash prizes!</p>
+            <p className="text-white/80">The overall best project will win prizes!</p>
           </div>
         </div>
       </div>
