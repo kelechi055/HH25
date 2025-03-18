@@ -443,19 +443,19 @@ function App() {
               <div className="space-y-4">
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Mechatronics with Arduino Traffic Lights</p>
+                  <p className="text-white/80">Workshop #1: TBD</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Building a 3D Printed Remote Controlled Vehicle</p>
+                  <p className="text-white/80">Workshop #2: TBD</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">3:00 PM</p>
-                  <p className="text-white/80">Physical Computing with Microbits</p>
+                  <p className="text-white/80">Workshop #3: TBD</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">4:30 PM</p>
-                  <p className="text-white/80">How to Build your First Website - Bubble.io</p>
+                  <p className="text-white/80">Workshop #4: TBD</p>
                 </div>
               </div>
 

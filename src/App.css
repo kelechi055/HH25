@@ -167,3 +167,31 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* App.css */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .team-members {
+    grid-template-columns: 1fr;
+  }
+
+  .flip-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .faq-item {
+    padding: 10px;
+  }
+
+  .sponsors {
+    grid-template-columns: 1fr;
+  }
+}
