@@ -530,160 +530,94 @@ function App() {
 
 
 
-{/* FAQ Section - NEW */}
+{/* FAQ Section - Restructured */}
 <section id="faq" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
     <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">FAQ</h2>
     
-    <div className="max-w-3xl mx-auto">
+    <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
       {/* FAQ Item 1 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 0 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(0)}
-        >
-          <span className="text-white font-medium text-lg">Who can participate?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 0 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 0 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-green-400 pixelated italic">Who can participate?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               HackHounds is open to all college and university students, regardless of major or experience level. You don't need to be a programming expert - we welcome beginners and will have plenty of workshops and mentors to help you learn!
             </p>
           </div>
-        )}
+        </div>
       </div>
       
       {/* FAQ Item 2 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 1 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(1)}
-        >
-          <span className="text-white font-medium text-lg">How much does it cost?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 1 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 1 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-purple-400 pixelated italic">How much does it cost?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               Absolutely nothing! HackHounds is completely free to attend. We'll provide meals, snacks, swag, and a space to work throughout the event.
             </p>
           </div>
-        )}
+        </div>
       </div>
       
       {/* FAQ Item 3 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 2 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(2)}
-        >
-          <span className="text-white font-medium text-lg">What should I bring?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 2 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 2 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-red-400 pixelated italic">What should I bring?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               Bring your laptop, charger, and any hardware you might need. We'll provide everything else, including food, drinks, and a comfortable workspace.
             </p>
           </div>
-        )}
+        </div>
       </div>
 
       {/* FAQ Item 4 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 3 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(3)}
-        >
-          <span className="text-white font-medium text-lg">Can I work in a team?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 3 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 3 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-blue-400 pixelated italic">Can I work in a team?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               Yes! You can work solo or in teams of up to four people. Teaming up is a great way to collaborate, learn from each other, and build something amazing together. If you don't have a team, we'll have a team-forming session at the start of the event.
             </p>
           </div>
-        )}
+        </div>
       </div>
 
       {/* FAQ Item 5 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 4 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(4)}
-        >
-          <span className="text-white font-medium text-lg">Will there be workshops?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 4 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 4 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-yellow-400 pixelated italic">Will there be workshops?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               Yes! We'll have a variety of workshops throughout the event. Currently the workshops are being set up, we will update this once we have some confirmations!
             </p>
           </div>
-        )}
+        </div>
       </div>
 
       {/* FAQ Item 6 */}
-      <div className="mb-6">
-        <button 
-          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 5 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-          onClick={() => toggleFaq(5)}
-        >
-          <span className="text-white font-medium text-lg">What are the judging criteria?</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${activeFaq === 5 ? 'rotate-180' : ''}`}
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {activeFaq === 5 && (
-          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+      <div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300">
+        <div className="flex flex-col md:flex-row items-start">
+          <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+            <h3 className="text-xl font-bold text-teal-200 pixelated italic">What is the judging criteria?</h3>
+          </div>
+          <div className="md:w-2/3">
             <p className="text-white">
               Projects will be judged on innovation, technical complexity, creativity, and presentation!
             </p>
           </div>
-        )}
+        </div>
       </div>
     </div>
   </div>
