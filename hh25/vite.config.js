@@ -11,6 +11,7 @@ export default defineConfig({
           "./index.html",
           "./src/**/*.{js,ts,jsx,tsx}",
         ],
+        base: "/HH25",
         theme: {
           extend: {},
         },
