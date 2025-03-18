@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import LoyolaLogo from './icons/Loyola-logo.png';
 import MIS from './icons/MIS.png';
 import ACM from './icons/ACM.png';
 import HH25 from './icons/HH25.png';
