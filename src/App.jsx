@@ -33,38 +33,10 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-    const toggleFaq = (index) => {
-      setActiveFaq(activeFaq === index ? null : index);
-    };
-  
-    // FAQ data
-    const faqItems = [
-      {
-        question: "Who can participate?",
-        answer: "HackHounds is open to all college and university students, regardless of major or experience level. You don't need to be a programming expert - we welcome beginners and will have plenty of workshops and mentors to help you learn!"
-      },
-      {
-        question: "How much does it cost?",
-        answer: "Absolutely nothing! HackHounds is completely free to attend. We'll provide meals, snacks, swag, and a space to work throughout the event."
-      },
-      {
-        question: "What should I bring?",
-        answer: "Bring your laptop, charger, and any hardware you might need. We'll provide everything else, including food, drinks, and a comfortable workspace."
-      },
-      {
-        question: "Can I work in a team?",
-        answer: "Yes! You can work solo or in teams of up to four people. Teaming up is a great way to collaborate, learn from each other, and build something amazing together. If you don't have a team, we'll have a team-forming session at the start of the event."
-      },
-      {
-        question: "Will there be workshops?",
-        answer: "Yes! We'll have a variety of workshops throughout the event. Currently the workshops are being set up, we will update this once we have some confirmations!"
-      },
-      {
-        question: "What are the judging criteria?",
-        answer: "Projects will be judged on innovation, technical complexity, creativity, and presentation!"
-      }
-    ];
+
+  const toggleFaq = (index) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
 
   const handleApplyClick = () => {
     setIsFormVisible(!isFormVisible); // Toggle form visibility
@@ -558,44 +530,164 @@ function App() {
 
 
 
-      <section id="faq" className="py-24 relative z-10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">FAQ</h2>
-        
-        <div className="max-w-3xl mx-auto">
-          {faqItems.map((item, index) => (
-            <div className="mb-6" key={index}>
-              <button 
-                className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === index ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
-                onClick={() => toggleFaq(index)}
-                type="button"
-                aria-expanded={activeFaq === index}
-                aria-controls={`faq-answer-${index}`}
-              >
-                <span className="text-white font-medium text-lg">{item.question}</span>
-                <svg 
-                  className={`w-6 h-6 transform transition-transform ${activeFaq === index ? 'rotate-180' : ''}`}
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              {activeFaq === index && (
-                <div 
-                  id={`faq-answer-${index}`}
-                  className="border border-gray-800 rounded-b-xl p-4 mt-1 bg-gray-900/40"
-                >
-                  <p className="text-white">{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+{/* FAQ Section - NEW */}
+<section id="faq" className="py-24 relative z-10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">FAQ</h2>
+    
+    <div className="max-w-3xl mx-auto">
+      {/* FAQ Item 1 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 0 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(0)}
+        >
+          <span className="text-white font-medium text-lg">Who can participate?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 0 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 0 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              HackHounds is open to all college and university students, regardless of major or experience level. You don't need to be a programming expert - we welcome beginners and will have plenty of workshops and mentors to help you learn!
+            </p>
+          </div>
+        )}
       </div>
-    </section>
+      
+      {/* FAQ Item 2 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 1 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(1)}
+        >
+          <span className="text-white font-medium text-lg">How much does it cost?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 1 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 1 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              Absolutely nothing! HackHounds is completely free to attend. We'll provide meals, snacks, swag, and a space to work throughout the event.
+            </p>
+          </div>
+        )}
+      </div>
+      
+      {/* FAQ Item 3 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 2 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(2)}
+        >
+          <span className="text-white font-medium text-lg">What should I bring?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 2 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 2 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              Bring your laptop, charger, and any hardware you might need. We'll provide everything else, including food, drinks, and a comfortable workspace.
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* FAQ Item 4 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 3 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(3)}
+        >
+          <span className="text-white font-medium text-lg">Can I work in a team?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 3 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 3 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              Yes! You can work solo or in teams of up to four people. Teaming up is a great way to collaborate, learn from each other, and build something amazing together. If you don't have a team, we'll have a team-forming session at the start of the event.
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* FAQ Item 5 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 4 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(4)}
+        >
+          <span className="text-white font-medium text-lg">Will there be workshops?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 4 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 4 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              Yes! We'll have a variety of workshops throughout the event. Currently the workshops are being set up, we will update this once we have some confirmations!
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* FAQ Item 6 */}
+      <div className="mb-6">
+        <button 
+          className={`w-full flex items-center justify-between bg-gray-900/60 border ${activeFaq === 5 ? 'border-green-400' : 'border-gray-700'} rounded-xl p-4 text-left hover:bg-gray-800/60 transition-all`}
+          onClick={() => toggleFaq(5)}
+        >
+          <span className="text-white font-medium text-lg">What are the judging criteria?</span>
+          <svg 
+            className={`w-6 h-6 transform transition-transform ${activeFaq === 5 ? 'rotate-180' : ''}`}
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 9L12 16L5 9" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        {activeFaq === 5 && (
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
+            <p className="text-white">
+              Projects will be judged on innovation, technical complexity, creativity, and presentation!
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Team Section */}
       <section id="team" className="py-24 relative z-10">
