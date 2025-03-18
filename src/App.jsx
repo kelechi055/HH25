@@ -56,7 +56,7 @@ function App() {
   const teamMembers = [
     { 
       name: "Silas Green", 
-      role: "Web Developer", 
+      role: "Web Developer / Team Member", 
       photo: Silas, 
       github: "https://github.com/SGreen24", 
       linkedin: "https://www.linkedin.com/in/silas-green-069a62250/",
