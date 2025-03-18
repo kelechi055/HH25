@@ -553,7 +553,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 0 && (
-          <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               HackHounds is open to all college and university students, regardless of major or experience level. You don't need to be a programming expert - we welcome beginners and will have plenty of workshops and mentors to help you learn!
             </p>
@@ -578,7 +578,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 1 && (
-          <div className="bg-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               Absolutely nothing! HackHounds is completely free to attend. We'll provide meals, snacks, swag, and a space to work throughout the event.
             </p>
@@ -603,7 +603,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 2 && (
-          <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               Bring your laptop, charger, and any hardware you might need. We'll provide everything else, including food, drinks, and a comfortable workspace.
             </p>
@@ -628,7 +628,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 3 && (
-          <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               Yes! You can work solo or in teams of up to four people. Teaming up is a great way to collaborate, learn from each other, and build something amazing together. If you don't have a team, we'll have a team-forming session at the start of the event.
             </p>
@@ -653,7 +653,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 4 && (
-          <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               Yes! We'll have a variety of workshops throughout the event. Currently the workshops are being set up, we will update this once we have some confirmations!
             </p>
@@ -678,7 +678,7 @@ function App() {
           </svg>
         </button>
         {activeFaq === 5 && (
-          <div className="bg-gray-900/40 border border-gray-800 rounded-b-xl p-4 mt-1">
+          <div className="border border-gray-800 rounded-b-xl p-4 mt-1" style={{ backgroundColor: 'rgba(17, 24, 39, 0.4)' }}>
             <p className="text-white">
               Projects will be judged on innovation, technical complexity, creativity, and presentation!
             </p>
