@@ -9,6 +9,8 @@ import Jenna from './icons/Jenna.png';
 import John from './icons/John.jpg';
 import Nicol from './icons/Nicol.png'
 import Callie from './icons/Callie.png'
+import Emma from './icons/Emma.png'
+import Dave from './icons/comic-dave.png'
 import CyberHounds from './icons/CyberHounds.png';
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
@@ -61,7 +63,7 @@ function App() {
       linkedin: "https://www.linkedin.com/in/silas-green-069a62250/",
       hometown: "Long Island, NY",
       majorYear: "Computer Science, Senior",
-      funFact: "I was a All-State Saxophonist in High School!"
+      funFact: "I was a All-State Saxophonist in High School"
     },
     { 
       name: "Callie Walker", 
@@ -71,7 +73,7 @@ function App() {
       linkedin: "https://www.linkedin.com/in/callie-walker-353a1b334/",
       hometown: "Calvert County, MD",
       majorYear: "Computer Science, Senior",
-      funFact: "I got 7th in my 8th grade Spelling Bee!"
+      funFact: "I got 7th in my 8th grade Spelling Bee"
     },
     { name: "Nicol Gutierrez", 
       role: "Team Member", 
@@ -79,16 +81,19 @@ function App() {
       linkedin: "https://www.linkedin.com/in/nicol-gutierrez-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       hometown: "Pasadena, MD",
       majorYear: "Information Systems and Data Analytics, Senior",
-      funFact: "I share a birth day AND  time with my 2 year old sister!"
+      funFact: "I share a birth day AND  time with my 2 year old sister"
     },
     { name: "Emma Heiser", 
       role: "Team Member", 
-      photo: "path_to_photo3.jpg", 
-      linkedin: "https://www.linkedin.com/in/emmasheiser/" 
+      photo: Emma, 
+      linkedin: "https://www.linkedin.com/in/emmasheiser/",
+      hometown: "Monroe Township, NJ",
+      majorYear: "Mathematics and Computer Science, Senior",
+      funFact: "I was a bassist for a rock band"
     },
     { name: "Dave Optitz", 
       role: "CS Faculty", 
-      photo: "path_to_photo3.jpg", 
+      photo: Dave, 
     },
     { name: "John Nweke", 
       role: "CS Faculty", 
@@ -139,6 +144,7 @@ function App() {
             <a href="#tracks" className="text-green-300 hover:text-pink-100 transition">Tracks</a>
             <a href="#prizes" className="text-green-300 hover:text-pink-100 transition">Prizes</a>
             <a href="#faq" className="text-green-300 hover:text-pink-100 transition">FAQ</a>
+            <a href="#team" className="text-green-300 hover:text-pink-100 transition">Team</a>
           </nav>
         </div>
       </header>
