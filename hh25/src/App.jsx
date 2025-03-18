@@ -91,14 +91,6 @@ function App() {
       majorYear: "Mathematics and Computer Science, Senior",
       funFact: "I was a bassist for a rock band"
     },
-    { name: "Dave Optitz", 
-      role: "CS Faculty", 
-      photo: Dave, 
-    },
-    { name: "John Nweke", 
-      role: "CS Faculty", 
-      photo: John 
-    },
     { name: "Jenna Borowy", 
       role: "Team Member", 
       photo: Jenna, 
@@ -107,6 +99,15 @@ function App() {
       majorYear: "Computer Science and Applied Math, Senior",
       funFact: "I have extra bones in each of my feet"
     },
+    { name: "Dave Optitz", 
+      role: "CS Faculty", 
+      photo: Dave, 
+    },
+    { name: "John Nweke", 
+      role: "CS Faculty", 
+      photo: John 
+    },
+    
   ];
 
   return (
