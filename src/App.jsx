@@ -728,9 +728,7 @@ function App() {
             <a href="https://www.instagram.com/loyolacyberhounds?igsh=bGRhcHdzMmR6ZXY0" className="text-white/70 hover:text-green-400 transition-colors">
             <GrInstagram className='w-6 h-6' />
             </a>
-            <a href="https://github.com/SGreen24/HH25" className='text-white/70 hover:text-green-400 transition-colors'>
-            <GrGithub className='w-6 h-6' />
-            </a>
+
           </div>
         </div>
       </footer>
