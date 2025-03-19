@@ -18,7 +18,6 @@ import { TbBrandDiscord } from "react-icons/tb";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeFaq, setActiveFaq] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false); // State for toggling visibility
 
   useEffect(() => {
@@ -34,9 +33,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleFaq = (index) => {
-    setActiveFaq(activeFaq === index ? null : index);
-  };
+
 
   const handleApplyClick = () => {
     setIsFormVisible(!isFormVisible); // Toggle form visibility
@@ -339,7 +336,7 @@ function App() {
           </div>
           <div className="text-center md:text-left">
             <h3 className="text-3xl font-bold text-amber-400 mb-2 pixelated">GRAND PRIZE</h3>
-            <p className="text-white text-xl mb-4">$300</p>
+            <p className="text-white text-xl mb-4">$300 in Amazon Gift Cards!</p>
             <p className="text-white/80">The overall best project will win prizes!</p>
           </div>
         </div>
@@ -354,7 +351,7 @@ function App() {
               <TbHexagonNumber2 className="w-8 h-8 text-slate-300" />
             </div>
             <h3 className="text-2xl font-bold text-slate-300 mb-2 pixelated">SECOND PLACE</h3>
-            <p className="text-white text-lg mb-2">$200</p>
+            <p className="text-white text-lg mb-2">$200 in Amazon Gift Cards!</p>
             <p className="text-white/80">Runner-up project with exceptional innovation and execution!</p>
           </div>
         </div>
@@ -366,7 +363,7 @@ function App() {
               <TbHexagonNumber3 className="w-8 h-8 text-amber-600" />
             </div>
             <h3 className="text-2xl font-bold text-amber-600 mb-2 pixelated">THIRD PLACE</h3>
-            <p className="text-white text-lg mb-2">$100</p>
+            <p className="text-white text-lg mb-2">$100 in Amazon Gift Cards!</p>
             <p className="text-white/80">Third best project combining creativity and technical skill!</p>
           </div>
         </div>
@@ -395,7 +392,7 @@ function App() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-green-400 mb-2 pixelated">NEWCOMER AWARD</h3>
-            <p className="text-white text-lg mb-2">$100</p>
+            <p className="text-white text-lg mb-2">$100 in Amazon Gift Cards!</p>
             <p className="text-white/80">Best project from first-time hackathon participants!</p>
           </div>
         </div>
