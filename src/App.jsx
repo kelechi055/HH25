@@ -11,6 +11,8 @@ import Callie from './icons/Callie.png'
 import Emma from './icons/Emma.png'
 import Dave from './icons/comic-dave.png'
 import CyberHounds from './icons/CyberHounds.png';
+import SOS from './icons/stand-out-stickers-logo.png'
+import MLH from './icons/MLH.png'
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
 import { GrGithub, GrInstagram, GrLinkedin } from "react-icons/gr";
@@ -237,87 +239,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Tracks Section - NEW */}
-<section id="tracks" className="py-24 relative z-10">
-  <div className="container mx-auto px-4">
-    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">TRACKS</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Track 1 - General */}
-      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <Sparkles size={32} className="text-purple-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
-        <div className="text-white text-center">
-          Submit your project to the General Track to be eligible for the following $100 Amazon Gift Cards:
-          <ul className="list-disc list-inside mt-2">
-            <li>Best First Time Hack</li>
-            <li>Best Entrepreneurship Idea</li>
-            <li>Best UI/UX Design</li>
-            <li>Most Socially Beneficial</li>
-            <li>Best Use of Cybersecurity</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Track 2 - AI/ML */}
-<div className="bg-black/50 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-  <div className="w-16 h-16 bg-red-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-    <BrainCircuit size={32} className="text-red-400" />
-  </div>
-  <h3 className="text-2xl font-bold text-red-400 text-center mb-4 pixelated">AI/ML</h3>
-  <p className="text-white text-center">
-    Harness the power of artificial intelligence and machine learning. Build intelligent systems, predictive models, or innovative applications that solve real-world problems.
-  </p>
-</div>
-
-      {/* Track 3 - Fintech */}
-      <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <CircleDollarSign size={32} className="text-green-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINANCE</h3>
-        <p className="text-white text-center">
-          Revolutionize financial services with innovative technology solutions. From payment systems to financial education, make finance more accessible and efficient.
-        </p>
-      </div>
-
-      {/* Track 4 - Computer Vision */}
-<div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-  <div className="w-16 h-16 bg-teal-200/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-    <Eye size={32} className="text-teal-200" />
-  </div>
-  <h3 className="text-2xl font-bold text-teal-200 text-center mb-4 pixelated">COMPUTER VISION</h3>
-  <p className="text-white text-center">
-    Create solutions that leverage image and video analysis. From object detection to augmented reality, explore how machines can "see" and interpret the world.
-  </p>
-</div>
-
-      {/* Track 5 - Art/Multimedia */}
-      <div className="bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <GraduationCap size={32} className="text-yellow-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
-        <p className="text-white text-center">
-          Explore the intersection of creativity and technology. Build projects that push the boundaries of digital art, animation, interactive media, or generative design. Show us how technology can amplify artistic expression!
-        </p>
-      </div>
-
-      {/* Track 6 - Health */}
-      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
-        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <BriefcaseMedical size={32} className="text-blue-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH</h3>
-        <p className="text-white text-center">
-          Innovate for a healthier future. Create solutions that improve healthcare access, patient outcomes, or wellness. Whether it's AI diagnostics, telemedicine, or fitness tech, your ideas can transform lives.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 {/* Prizes Section - NEW */}
@@ -684,36 +605,83 @@ function App() {
         </div>
       </section>
 
-{/* Sponsors Section - NEW */}
-<section id="sponsors" className="py-24 relative z-10">
+  {/* Sponsors Section - Redesigned */}
+  <section id="sponsors" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
     <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SPONSORS</h2>
     
-    {/* Centered Grid for Sponsors */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+    {/* Redesigned Grid for Sponsors */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       {/* Sponsor 1 - MIS with Instagram Link */}
-      <a href="https://www.instagram.com/loyolamis" target="_blank" rel="noopener noreferrer">
-        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-          <img src={MIS} alt="Sponsor 1" className="max-h-20" />
+      <a href="https://www.instagram.com/loyolamis" target="_blank" rel="noopener noreferrer" 
+         className="transform transition-all duration-300 hover:-translate-y-2">
+        <div className="flex items-center justify-center bg-black/50 border border-white rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4">
+              <img src={MIS} alt="MIS" className="max-h-12" />
+            </div>
+            <h3 className="text-xl font-bold text-white pixelated text-center">MIS</h3>
+          </div>
         </div>
       </a>
-
+      
       {/* Sponsor 2 - CyberHounds with Instagram Link */}
-      <a href="https://www.instagram.com/loyolacyberhounds" target="_blank" rel="noopener noreferrer">
-        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-          <img src={CyberHounds} alt="Sponsor 2" className="max-h-20" />
+      <a href="https://www.instagram.com/loyolacyberhounds" target="_blank" rel="noopener noreferrer"
+         className="transform transition-all duration-300 hover:-translate-y-2">
+        <div className="flex items-center justify-center bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16rounded-full flex items-center justify-center mb-4">
+              <img src={CyberHounds} alt="CyberHounds" className="max-h-12" />
+            </div>
+            <h3 className="text-xl font-bold text-green-300 pixelated text-center">CYBER HOUNDS</h3>
+          </div>
         </div>
       </a>
-
+      
       {/* Sponsor 3 - ACM with Instagram Link */}
-      <a href="https://www.instagram.com/loyolacomputes" target="_blank" rel="noopener noreferrer">
-        <div className="flex items-center justify-center bg-gray-900/70 border border-gray-700 rounded-xl p-6 backdrop-blur-sm">
-          <img src={ACM} alt="Sponsor 3" className="max-h-20" />
+      <a href="https://www.instagram.com/loyolacomputes" target="_blank" rel="noopener noreferrer"
+         className="transform transition-all duration-300 hover:-translate-y-2">
+        <div className="flex items-center justify-center bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16  rounded-full flex items-center justify-center mb-4">
+              <img src={ACM} alt="ACM" className="max-h-12" />
+            </div>
+            <h3 className="text-xl font-bold text-green-400 pixelated text-center">ACM</h3>
+          </div>
+        </div>
+      </a>
+      
+      {/* Sponsor 4 - SOS with Site Link */}
+      <a href="https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Femail2click.mlh.io%2Fls%2Fclick%3Fupn%3Du001.RdozofatWF2I0U8RNZ0g-2Bs5RDtELZ06J1YoJ8HGyd-2F67eMyOvJXFcFGNppLJ-2BKk-2FMh7MmiTl7y8xdv9hVe3ApnCKm4aDh1POhPGXJ3ZQcxZOkgZJDcqQbs8dgHH-2FIuSd46yAYKuBj1Gb3mF548jGmBaDw55K8wnEURAWgksxqWrskGSXqk8PX4L7GEozpkZJDDnqGIOEEFfuKWaG0PNYQLKm158apzcwZ6o6VVHqSlc9nvK8pHn6bo5nusCHr00HIYzMFFhv43BLvrJd6y9t2ni2Drwqvx8DZamuzXPZnI8eY17T-2BdxB1RafBEH36k4O7elCchhFzJqrIf4Xr1piffi850VGF83evVazISw-2BE6gMNLZG1eblGaoyt9-2FCf02o89TjdMiv37ba8QsXNJuKxJAIyVw4J1ykNg6EfXBtztM-3DLdOb_uT-2B2KJTFkm3vjCS7TDFkjTNaJW3LWM7sfE04Qvh-2FFQc-2BKxD4u4Aio4XulPQ0-2B-2BdS-2BlE-2FK2sRQVrLRsZXVzJwxcaRJhrBw8GJoAHHW36s7a5sk3Bzz9Fl-2F2IOyh0yViVuGpHmkIfdhDDq2UzjUSRN5srsw7M0EBwKyQCvFDtsB6eSn-2BwNC6gBMsuqfUhher9hguyshs36v3-2Fp3w2Zid7ZWiVejE-2BiR1eByGciglJzhu0WMW-2FjHlEuIRgRffF1m5Q7GdMqYH-2BY-2FdLETiH1AKy12qEvKsVKNOlo2pkhH4IWfhM-3D&data=05%7C02%7Csgreen%40loyola.edu%7Cf94d5d70b0ae4fbd724708dd68808a95%7C30ae0a8f3cdf44fdaf34278bf639b85d%7C0%7C0%7C638781623499231941%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=mapky1%2BmTkEDQt%2BqaDthxo6%2F%2FMRTKH0gQj17a%2BwuEj0%3D&reserved=0" 
+         target="_blank" rel="noopener noreferrer"
+         className="transform transition-all duration-300 hover:-translate-y-2">
+        <div className="flex items-center justify-center bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16  rounded-full flex items-center justify-center mb-4">
+              <img src={SOS} alt="SOS" className="max-h-12" />
+            </div>
+            <h3 className="text-xl font-bold text-blue-400 pixelated text-center">Stand out Stickers</h3>
+          </div>
+        </div>
+      </a>
+      
+      {/* Sponsor 5 - MLH with Site Link */}
+      <a href="https://mlh.io" target="_blank" rel="noopener noreferrer"
+         className="transform transition-all duration-300 hover:-translate-y-2">
+        <div className="flex items-center justify-center bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16  rounded-full flex items-center justify-center mb-4">
+              <img src={MLH} alt="MLH" className="max-h-12" />
+            </div>
+            <h3 className="text-xl font-bold text-yellow-400 pixelated text-center">Major League Hacking</h3>
+          </div>
         </div>
       </a>
     </div>
   </div>
 </section>
+
+
 
       {/* Footer - NEW */}
       <footer className="bg-gray-900/80 backdrop-blur-md py-12 relative z-10">
