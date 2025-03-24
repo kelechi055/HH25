@@ -12,7 +12,6 @@ import Emma from './icons/Emma.png'
 import Dave from './icons/comic-dave.png'
 import CyberHounds from './icons/CyberHounds.png';
 import SOS from './icons/stand-out-stickers-logo.png'
-import MLH from './icons/MLH.png'
 import { BriefcaseMedical, BrainCircuit, CircleDollarSign, GraduationCap, Sparkles, Crown, Eye } from 'lucide-react';
 import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from "react-icons/tb";
 import { GrGithub, GrInstagram, GrLinkedin } from "react-icons/gr";
@@ -747,18 +746,6 @@ function App() {
         </div>
       </a>
       
-      {/* Sponsor 5 - MLH with Site Link */}
-      <a href="https://mlh.io" target="_blank" rel="noopener noreferrer"
-         className="transform transition-all duration-300 hover:-translate-y-2">
-        <div className="flex items-center justify-center bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 h-full">
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16  rounded-full flex items-center justify-center mb-4">
-              <img src={MLH} alt="MLH" className="max-h-12" />
-            </div>
-            <h3 className="text-xl font-bold text-yellow-400 pixelated text-center">Major League Hacking</h3>
-          </div>
-        </div>
-      </a>
     </div>
   </div>
 </section>
