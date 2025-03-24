@@ -241,6 +241,88 @@ function App() {
       </section>
 
 
+           {/* Tracks Section - NEW */}
+<section id="tracks" className="py-24 relative z-10">
+  <div className="container mx-auto px-4">
+    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">TRACKS</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Track 1 - General */}
+      <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <Sparkles size={32} className="text-purple-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
+        <div className="text-white text-center">
+          Submit your project to the General Track to be eligible for the following $100 Amazon Gift Cards:
+          <ul className="list-disc list-inside mt-2">
+            <li>Best First Time Hack</li>
+            <li>Best Entrepreneurship Idea</li>
+            <li>Best UI/UX Design</li>
+            <li>Most Socially Beneficial</li>
+            <li>Best Use of Cybersecurity</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Track 2 - AI/ML */}
+<div className="bg-black/50 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+  <div className="w-16 h-16 bg-red-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+    <BrainCircuit size={32} className="text-red-400" />
+  </div>
+  <h3 className="text-2xl font-bold text-red-400 text-center mb-4 pixelated">AI/ML</h3>
+  <p className="text-white text-center">
+    Harness the power of artificial intelligence and machine learning. Build intelligent systems, predictive models, or innovative applications that solve real-world problems.
+  </p>
+</div>
+
+ {/* Track 3 - Fintech */}
+ <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <CircleDollarSign size={32} className="text-green-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-green-400 text-center mb-4 pixelated">FINANCE</h3>
+        <p className="text-white text-center">
+          Revolutionize financial services with innovative technology solutions. From payment systems to financial education, make finance more accessible and efficient.
+        </p>
+      </div>
+
+      {/* Track 4 - Computer Vision */}
+<div className="bg-black/50 border border-teal-200/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+  <div className="w-16 h-16 bg-teal-200/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+    <Eye size={32} className="text-teal-200" />
+  </div>
+  <h3 className="text-2xl font-bold text-teal-200 text-center mb-4 pixelated">COMPUTER VISION</h3>
+  <p className="text-white text-center">
+    Create solutions that leverage image and video analysis. From object detection to augmented reality, explore how machines can "see" and interpret the world.
+  </p>
+</div>
+{/* Track 5 - Art/Multimedia */}
+<div className="bg-black/50 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <GraduationCap size={32} className="text-yellow-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
+        <p className="text-white text-center">
+          Explore the intersection of creativity and technology. Build projects that push the boundaries of digital art, animation, interactive media, or generative design. Show us how technology can amplify artistic expression!
+        </p>
+      </div>
+
+      {/* Track 6 - Health */}
+      <div className="bg-black/50 border border-blue-500/30 rounded-xl p-6 backdrop-blur-sm hover:bg-black/70 transition-all duration-300 transform hover:-translate-y-2">
+        <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <BriefcaseMedical size={32} className="text-blue-400" />
+        </div>
+        <h3 className="text-2xl font-bold text-blue-400 text-center mb-4 pixelated">HEALTH</h3>
+        <p className="text-white text-center">
+          Innovate for a healthier future. Create solutions that improve healthcare access, patient outcomes, or wellness. Whether it's AI diagnostics, telemedicine, or fitness tech, your ideas can transform lives.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 {/* Prizes Section - NEW */}
 <section id="prizes" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
