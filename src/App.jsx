@@ -252,14 +252,7 @@ function App() {
         </div>
         <h3 className="text-2xl font-bold text-purple-400 text-center mb-4 pixelated">GENERAL</h3>
         <div className="text-white text-center">
-          Submit your project to the General Track to be eligible for the following $100 Amazon Gift Cards:
-          <ul className="list-disc list-inside mt-2">
-            <li>Best First Time Hack</li>
-            <li>Best Entrepreneurship Idea</li>
-            <li>Best UI/UX Design</li>
-            <li>Most Socially Beneficial</li>
-            <li>Best Use of Cybersecurity</li>
-          </ul>
+          Submit your project to the General Track to be eligible to win a Mug Warmer!
         </div>
       </div>
 
@@ -338,8 +331,7 @@ function App() {
           </div>
           <div className="text-center md:text-left">
             <h3 className="text-3xl font-bold text-amber-400 mb-2 pixelated">GRAND PRIZE</h3>
-            <p className="text-white text-xl mb-4">$300 in Amazon Gift Cards!</p>
-            <p className="text-white/80">The overall best project will win prizes!</p>
+            <p className="text-white text-xl mb-4">Sony WH-CH720N Noise Cancelling Headphones!</p>
           </div>
         </div>
       </div>
@@ -353,8 +345,7 @@ function App() {
               <TbHexagonNumber2 className="w-8 h-8 text-slate-300" />
             </div>
             <h3 className="text-2xl font-bold text-slate-300 mb-2 pixelated">SECOND PLACE</h3>
-            <p className="text-white text-lg mb-2">$200 in Amazon Gift Cards!</p>
-            <p className="text-white/80">Runner-up project with exceptional innovation and execution!</p>
+            <p className="text-white text-lg mb-2">JBL Flip 5 Portable Bluetooth Speakers!</p>
           </div>
         </div>
 
@@ -365,8 +356,7 @@ function App() {
               <TbHexagonNumber3 className="w-8 h-8 text-amber-600" />
             </div>
             <h3 className="text-2xl font-bold text-amber-600 mb-2 pixelated">THIRD PLACE</h3>
-            <p className="text-white text-lg mb-2">$100 in Amazon Gift Cards!</p>
-            <p className="text-white/80">Third best project combining creativity and technical skill!</p>
+            <p className="text-white text-lg mb-2">HyperX Mechanical Keyboards!</p>
           </div>
         </div>
       </div>
@@ -380,22 +370,12 @@ function App() {
               <Crown size={32} className="text-purple-400" />
             </div>
             <h3 className="text-2xl font-bold text-purple-400 mb-2 pixelated">TRACK WINNERS</h3>
-            <p className="text-white text-lg mb-2">$100 Per Track</p>
-            <p className="text-white/80">Best project in each of our six themed tracks.</p>
-          </div>
-        </div>
-
-        {/* Newcomer Prize */}
-        <div className="bg-black/50 border border-green-500/30 rounded-xl p-6 backdrop-blur-sm">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-4">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L14.5 9H22L16 13.5L18 21L12 17L6 21L8 13.5L2 9H9.5L12 2Z" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-green-400 mb-2 pixelated">NEWCOMER AWARD</h3>
-            <p className="text-white text-lg mb-2">$100 in Amazon Gift Cards!</p>
-            <p className="text-white/80">Best project from first-time hackathon participants!</p>
+            <p className="text-white text-lg mb-2">General: Mug Warmer</p>
+            <p className="text-white text-lg mb-2">AI/ML: Apple Airtag</p>
+            <p className="text-white text-lg mb-2">Finance: Portable Charger</p>
+            <p className="text-white text-lg mb-2">Computer Vision: Amazon Echo</p>
+            <p className="text-white text-lg mb-2">Art/Multimedia: Drawing Tablets</p>
+            <p className="text-white text-lg mb-2">Health: Fitness Tracker Smart Ring</p>
           </div>
         </div>
       </div>
