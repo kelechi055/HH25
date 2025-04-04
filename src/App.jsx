@@ -422,19 +422,11 @@ function App() {
               <div className="space-y-4">
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Workshop #1: TBD</p>
+                  <p className="text-white/80">Workshop #1: Intro to Game Dev</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Workshop #2: TBD</p>
-                </div>
-                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
-                  <p className="text-white font-medium">3:00 PM</p>
-                  <p className="text-white/80">Workshop #3: TBD</p>
-                </div>
-                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
-                  <p className="text-white font-medium">4:30 PM</p>
-                  <p className="text-white/80">Workshop #4: TBD</p>
+                  <p className="text-white/80">Workshop #2: Cybersecurity from a CISO's Perspective</p>
                 </div>
               </div>
 
@@ -444,10 +436,6 @@ function App() {
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">6:30 PM</p>
                   <p className="text-white/80">Dinner</p>
-                </div>
-                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
-                  <p className="text-white font-medium">7:30 PM</p>
-                  <p className="text-white/80">Company Networking</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">9:00 PM</p>
@@ -492,6 +480,10 @@ function App() {
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:00 PM</p>
                   <p className="text-white/80">Project Presentations and Judging</p>
+                </div>
+                <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
+                  <p className="text-white font-medium">2:00 PM</p>
+                  <p className="text-white/80">Workshop #3: How to add a Hackathon to your Resume</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">3:00 PM</p>
