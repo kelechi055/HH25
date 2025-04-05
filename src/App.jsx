@@ -501,11 +501,11 @@ function App() {
               <div className="space-y-4">
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
                   <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Workshop #1: Intro to Game Dev</p>
+                  <p className="text-white/80">Workshop #1: Cybersecurity from a CISO's Perspective</p>
                 </div>
                 <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4">
-                  <p className="text-white font-medium">1:30 PM</p>
-                  <p className="text-white/80">Workshop #2: Cybersecurity from a CISO's Perspective</p>
+                  <p className="text-white font-medium">3:00 PM</p>
+                  <p className="text-white/80">Workshop #2: Intro to Game Dev</p>
                 </div>
               </div>
 
