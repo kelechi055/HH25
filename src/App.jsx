@@ -460,7 +460,7 @@ function App() {
       {/* Schedule Section */}
       <section id="schedule" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SCHEDULE</h2>
+          <h2 className="text-4xl font-bold text-white mb-12 text-center pixelated glow-text">SCHEDULE</h2>
 
           {/* Schedule Grid */}
           <div className="max-w-4xl mx-auto">
@@ -735,7 +735,7 @@ function App() {
   {/* Sponsors Section - Redesigned */}
   <section id="sponsors" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
-  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-12 text-center pixelated glow-text">SPONSORS</h2>
+  <h2 className="text-4xl font-bold text-white mb-12 text-center pixelated glow-text">SPONSORS</h2>
     
     {/* Redesigned Grid for Sponsors */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
