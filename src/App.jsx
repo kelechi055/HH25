@@ -148,10 +148,10 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-4 pt-32 pb-20 relative z-10 min-h-screen flex flex-col justify-center items-center">
-        <h1 className="text-6xl md:text-8xl font-bold text-white mb-12 text-center pixelated glow-text">
-          HACK<span className="text-green-400">HOUNDS</span> 2025
-        </h1>
+      <main className="container mx-auto px-4 py-12 md:pt-32 md:pb-20 relative z-10 min-h-screen flex flex-col justify-center items-center">
+  <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 md:mb-12 text-center pixelated glow-text">
+    HACK<span className="text-green-400">HOUNDS</span> 2025
+  </h1>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <div className="bg-black border border-white/30 text-white px-6 py-2 rounded-full">
@@ -293,7 +293,7 @@ function App() {
         <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
           <GraduationCap size={32} className="text-yellow-400" />
         </div>
-        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/MULTIMEDIA</h3>
+        <h3 className="text-2xl font-bold text-yellow-400 text-center mb-4 pixelated">ART/ MULTIMEDIA</h3>
         <p className="text-white text-center">
           Explore the intersection of creativity and technology. Build projects that push the boundaries of digital art, animation, interactive media, or generative design. Show us how technology can amplify artistic expression!
         </p>
@@ -319,7 +319,6 @@ function App() {
 <section id="prizes" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
     <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">PRIZES</h2>
-    
     <div className="max-w-5xl mx-auto">
       {/* Grand Prize */}
       <div className="bg-gradient-to-r from-amber-500/20 to-amber-300/20 border border-amber-400 rounded-xl p-8 backdrop-blur-sm transform transition-all hover:scale-105 mb-8">
@@ -335,7 +334,7 @@ function App() {
           </div>
         </div>
       </div>
-
+      
       {/* Second and Third Place Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Second Place */}
@@ -348,7 +347,7 @@ function App() {
             <p className="text-white text-lg mb-2">JBL Flip 5 Portable Bluetooth Speakers!</p>
           </div>
         </div>
-
+        
         {/* Third Place */}
         <div className="bg-gradient-to-r from-amber-700/20 to-amber-600/20 border border-amber-700 rounded-xl p-6 backdrop-blur-sm transform transition-all hover:scale-105">
           <div className="flex flex-col items-center text-center">
@@ -360,22 +359,97 @@ function App() {
           </div>
         </div>
       </div>
-
-      {/* Track Winners and Newcomer Award Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Track Prizes */}
-        <div className="bg-black/50 border border-purple-500/30 rounded-xl p-6 backdrop-blur-sm">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4">
+      
+      {/* Track Winners Row */}
+      <div className="mb-8">
+        <div className="bg-gradient-to-br from-gray-900/90 to-black/90 rounded-xl border border-purple-500/30 overflow-hidden shadow-lg backdrop-blur-sm p-6 relative">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-white to-purple-500"></div>
+          
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Crown size={32} className="text-purple-400" />
             </div>
-            <h3 className="text-2xl font-bold text-purple-400 mb-2 pixelated">TRACK WINNERS</h3>
-            <p className="text-white text-lg mb-2">General: Mug Warmer</p>
-            <p className="text-white text-lg mb-2">AI/ML: Apple Airtag</p>
-            <p className="text-white text-lg mb-2">Finance: Portable Charger</p>
-            <p className="text-white text-lg mb-2">Computer Vision: Amazon Echo</p>
-            <p className="text-white text-lg mb-2">Art/Multimedia: Drawing Tablets</p>
-            <p className="text-white text-lg mb-2">Health: Fitness Tracker Smart Ring</p>
+            <h3 className="text-2xl font-bold pixelated text-purple-400 mb-2">TRACK WINNERS</h3>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* General Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-purple-500 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-purple-400/20 rounded-full flex items-center justify-center mr-3">
+                  <Sparkles size={20} className="text-purple-400" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-purple-400 pixelated">GENERAL</h4>
+                  <p className="text-white text-sm">Mug Warmer</p>
+                </div>
+              </div>
+            </div>
+
+            {/* AI/ML Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-red-500 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-red-400/20 rounded-full flex items-center justify-center mr-3">
+                  <BrainCircuit size={20} className="text-red-400" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-red-400 pixelated">AI/ML</h4>
+                  <p className="text-white text-sm">Apple Airtag</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Finance Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-green-500 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-green-400/20 rounded-full flex items-center justify-center mr-3">
+                  <CircleDollarSign size={20} className="text-green-400" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-green-400 pixelated">FINANCE</h4>
+                  <p className="text-white text-sm">Portable Charger</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Computer Vision Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-teal-200 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-teal-200/20 rounded-full flex items-center justify-center mr-3">
+                  <Eye size={20} className="text-teal-200" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-teal-200 pixelated">COMPUTER VISION</h4>
+                  <p className="text-white text-sm">Amazon Echo</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Art/Multimedia Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-yellow-500 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-yellow-400/20 rounded-full flex items-center justify-center mr-3">
+                  <GraduationCap size={20} className="text-yellow-400" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-yellow-400 pixelated">ART/ MULTIMEDIA</h4>
+                  <p className="text-white text-sm">Drawing Tablets</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Health Track */}
+            <div className="bg-black/40 backdrop-blur-sm p-4 rounded-lg border-l-4 border-blue-500 hover:bg-black/60 transition-all hover:-translate-y-1 duration-300">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-blue-400/20 rounded-full flex items-center justify-center mr-3">
+                  <BriefcaseMedical size={20} className="text-blue-400" />
+                </div>
+                <div>
+                  <h4 className="text-md font-bold text-blue-400 pixelated">HEALTH</h4>
+                  <p className="text-white text-sm">Fitness Tracker Smart Ring</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -661,7 +735,7 @@ function App() {
   {/* Sponsors Section - Redesigned */}
   <section id="sponsors" className="py-24 relative z-10">
   <div className="container mx-auto px-4">
-    <h2 className="text-5xl font-bold text-white mb-12 text-center pixelated glow-text">SPONSORS</h2>
+  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-12 text-center pixelated glow-text">SPONSORS</h2>
     
     {/* Redesigned Grid for Sponsors */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
