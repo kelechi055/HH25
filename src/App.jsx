@@ -153,6 +153,7 @@ function App() {
   <div className="flex flex-col sm:flex-row sm:justify-center">
     <div>HACK</div>
     <div className="text-green-400">HOUNDS</div>
+    <div className="sm:ml-2"> </div>
     <div className="sm:ml-2">2025</div>
   </div>
 </h1>
