@@ -149,9 +149,13 @@ function App() {
 
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-12 md:pt-32 md:pb-20 relative z-10 min-h-screen flex flex-col justify-center items-center">
-  <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 md:mb-12 text-center pixelated glow-text">
-    HACK<span className="text-green-400">HOUNDS</span> 2025
-  </h1>
+      <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 md:mb-12 text-center pixelated glow-text">
+  <div className="flex flex-col sm:flex-row sm:justify-center">
+    <div>HACK</div>
+    <div className="text-green-400">HOUNDS</div>
+    <div className="sm:ml-2">2025</div>
+  </div>
+</h1>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <div className="bg-black border border-white/30 text-white px-6 py-2 rounded-full">
