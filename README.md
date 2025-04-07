@@ -28,7 +28,6 @@ Welcome to the official repository for **HackHounds 2025**, Loyola University Ma
       - [MIS](#mis)
       - [CyberHounds](#cyberhounds)
       - [ACM](#acm)
-      - [ColorStack LUM](#colorstack-lum)
   - [Contributing](#contributing)
       - [Steps to Contribute](#steps-to-contribute)
   - [Contact](#contact)
@@ -165,9 +164,6 @@ We are grateful to our sponsors for their support:
 
 #### ACM
 - **Instagram**: [@loyolacomputes](https://www.instagram.com/loyolacomputes)
-
-#### ColorStack LUM
-- **Instagram**: [@colorstacklum](https://www.instagram.com/colorstacklum)
 
 ---
 
